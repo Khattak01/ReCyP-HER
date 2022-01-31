@@ -1,0 +1,101 @@
+.input__box {
+  /* display: flex;
+    justify-content: space-between;
+    align-items: center; */
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+
+  width: 100%;
+  min-width: 40rem;
+  border-bottom: 2px solid var(--color-secondary);
+  /* border: 1px solid black; */
+}
+.input__box label,
+.input__box input {
+  display: block;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border: none;
+  font-size: 1.7rem;
+  transition: var(--default-transition);
+  /* border: 1px solid black; */
+  width: 100%;
+  color: var(--color-gray-dark);
+}
+.input__box input {
+  flex: 0.75;
+  outline: none;
+  position: relative;
+  padding-left: 1rem;
+  border-left: 3px solid transparent;
+  margin-left: 0.25rem;
+}
+.input__box input:focus {
+  border-color: var(--color-tertiary);
+}
+.input__box label {
+  cursor: pointer;
+  flex: 0.15;
+  /* min-width: 15rem; */
+  margin-left: 0;
+  font-size: 1.8rem;
+}
+.input_inline__box {
+  /* border: 1px solid red; */
+  /* margin-left: auto;
+    margin-right: auto; */
+  position: relative;
+  display: flex;
+
+  width: 100%;
+  min-width: 40rem;
+  border-bottom: 2px solid var(--color-secondary);
+}
+.input_inline__box label,
+.input_inline__box input {
+  /* display: block; */
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border: none;
+  font-size: var(--default-font-size);
+  transition: var(--default-transition);
+  /* border: 1px solid black; */
+  width: 100%;
+  color: var(--color-gray-dark);
+}
+.input_inline__box label {
+  cursor: pointer;
+  flex: 0.3;
+  /* min-width: 15rem; */
+  /* margin-left: 0; */
+  font-size: 1.8rem;
+}
+.input_inline__box input {
+  flex: 0.7;
+  outline: none;
+  border: none;
+  position: relative;
+  padding-left: 1rem;
+  font-size: var(--default-font-size);
+  border-left: 3px solid var(--color-tertiary);
+  /* margin-left: .25rem; */
+}
+
+.input_inline__box textarea {
+  margin: 0.5rem;
+  padding: 0.5rem;
+  transition: var(--default-transition);
+  /* border: 1px solid black; */
+  width: 100%;
+  color: var(--color-gray-dark);
+
+  flex: 0.7;
+  outline: none;
+  border: none;
+  position: relative;
+  padding-left: 1rem;
+  font-size: var(--default-font-size);
+  border-left: 3px solid var(--color-tertiary);
+  height: 12rem;
+}

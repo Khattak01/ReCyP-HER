@@ -1,0 +1,16 @@
+.game {
+  min-height: 100vh;
+  display: flex;
+}
+
+.game > * {
+  /* border: 1px solid red; */
+}
+
+.game > *:first-child {
+  flex: 0.22;
+  min-width: 24rem;
+}
+.game > *:last-child {
+  flex-grow: 1;
+}

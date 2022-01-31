@@ -1,13 +1,133 @@
-body {
+*,
+*::after,
+*::before {
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+}
+html {
+  /* his defines what 1rem is */
+  font-size: 62.5%; /*1 rem = 10px; 10px/16px = 62.5%*/
+}
+@media screen and (max-width: 1200px) {
+  /*width < 1200?*/
+  html {
+    font-size: 56.25%; /*1 rem = 9px, 9/16 = 50%*/
+  }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@media screen and (max-width: 900px) {
+  /*width < 900?*/
+  html {
+    font-size: 50%; /*1 rem = 8px, 8/16 = 50%*/
+  }
+}
+
+@media screen and (max-width: 480px) {
+  /*mobile and smaller*/
+  html {
+    font-size: 43.75%; /*1rem = 7, 7/16 = 43.75%*/
+  }
+}
+@media screen and (min-width: 1500px) {
+  html {
+    font-size: 70%; /*1rem = , 11.something/16*/
+  }
+}
+
+:root {
+  --color-primary: #f9f9f9;
+  --color-primary-dark: #9494945b;
+
+  --color-secondary: #619ff5;
+  --color-secondary-dark: #458ff6;
+
+  --color-tertiary: #FF9900;
+
+  --dark-color: #343a40;
+  --light-color: #f4f4f4;
+  --danger-color: #f14646;
+  --success-color: #28a745;
+  --pending-color: #f1a20f;
+
+  --color-gray-dark: #333333;
+  --color-gray-light: #7c7c7c;
+
+  --color-white: #ffffff;
+
+  --default-gap: 5rem;
+  --default-gap-sm: 2.5rem;
+  --default-gap-xs: 1rem;
+
+  --default-box-shadow: 1px 1px 1px #f2f2f2, -1px -1px 1.5px #ffffff;
+
+  --default-br: 0.3rem;
+
+  --default-transition: 0.3s cubic-bezier(0.38, -0.01, 0, 0.99) all;
+
+  --default-font-size: 1.7rem;
+
+  --font-family-heading: "Mulish", sans-serif;
+
+  --font-family-general: "Roboto", sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+th {
+  font-family: var(--font-family-heading);
+}
+p,
+span,
+li,
+ul,
+a,
+label,
+input,
+select,
+table,
+tr,
+td {
+  font-family: var(--font-family-general);
+}
+body {
+  font-size: var(--default-font-size);
+  background-color: var(--color-primary);
+}
+.container {
+  width: 90%;
+  max-width: 1300px;
+  margin: auto auto;
+}
+@media (max-width: 700px) {
+  .container {
+    width: 98%;
+  }
+}
+
+::selection {
+  background-color: var(--color-secondary);
+  color: var(--color-gray-light);
+}
+.heading {
+  color: var(--color-secondary);
+  font-family: var(--font-family-heading);
+  font-size: 3.2rem;
+}
+.heading--secondary {
+  color: var(--color-gray-dark);
+  font-family: var(--font-family-heading);
+  font-size: 2.8rem;
+}
+.heading--tertiary {
+  color: var(--color-secondary);
+  font-family: var(--font-family-heading);
+  font-size: 2.4rem;
+}
+.text {
+  color: var(--color-gray-dark);
+  font-size: var(--default-font-size);
 }

@@ -1,0 +1,36 @@
+.app {
+  position: relative;
+  background: var(--color-primary);
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  /* border: 1px solid red; */
+  min-height: 100vh;
+}
+
+a:link,
+a:active,
+a:visited {
+  color: var(--color-secondary-dark);
+  transition: var(--default-transition);
+}
+a:hover {
+  color: var(--color-tertiary);
+}
+
+.alert-box {
+  width: 50rem;
+  right: 0;
+  z-index: 1;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  max-height: 17rem;
+  overflow-y: auto;
+}
+
+.display-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

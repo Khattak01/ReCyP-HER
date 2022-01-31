@@ -1,0 +1,15 @@
+.video__responsive {
+  overflow: hidden;
+  /* padding-bottom: 56.25%; */
+  position: relative;
+  min-height: calc(100vh - 10rem);
+  /* height: 0; */
+  border: 1px solid red;
+}
+.video-video__responsive iframe {
+  left: 0;
+  top: 0;
+  min-height: calc(100vh - 10rem) !important;
+  width: 100%;
+  position: absolute;
+}

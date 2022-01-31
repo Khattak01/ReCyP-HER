@@ -1,0 +1,118 @@
+.header{
+    min-height: 10vh;
+    width: 100%;
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border-bottom: 1px solid black; */
+    background: #ffffff;
+    /* box-shadow: var(--default-box-shadow) */
+}
+.navbar{
+    height: 100%;;
+    display: flex;
+}
+
+/* .logo__box h1{
+    font-family: 'Sedgwick Ave', cursive !important;
+    color: #5f5f5f;
+} */
+.navbar__links{
+    list-style: none;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    transition: all .3s ease-in;
+    /* border: 1px solid black; */
+}
+.navbar__toggle_menu {
+    position: absolute;
+    top:3rem;
+    display: none;
+
+    right: 0;
+    cursor: pointer;
+    z-index: 200;
+  }
+@media (max-width: 800px) {
+    .logo{
+        /* margin-top: 4vh; */
+    }
+    .navbar__toggle_menu {
+        display: block;
+      }
+    .navbar__links {
+      flex-direction: column;
+      width: 100%;
+      height: 30rem;
+      justify-content: space-around;
+
+      width: 100%;
+      justify-items: center;
+      flex-direction: column;
+      margin: auto;
+      opacity: 0;
+      display: none;
+      position: absolute;
+      z-index: 100;
+      background-color: #ffffff;
+  
+      top: 10rem;
+      height: 0;
+      left: 0;
+      right: 0;
+      padding: 2rem;
+    }
+    .show__links {
+        display: flex;
+        height: auto;
+        opacity: 1;
+      }
+      .navbar__link{
+          margin: 0 !important;
+          margin-bottom: 2rem !important;
+          /* margin-right: 0; */
+      }
+  }
+  .navbar__link{
+      /* border: 1px solid black; */
+  }
+.navbar__links .navbar__link{
+    color: var(--color-gray-dark);
+    cursor: pointer;
+    position: relative;
+    transition: all .3s ease-in;
+    font-size: 1.7rem;
+}
+.navbar__links .navbar__link:not(:last-of-type){
+    margin-right: 2.5rem;
+}
+.navbar__links .navbar__link::after{
+    left: 0;
+    bottom: -1rem;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: .3rem;
+    transition: all .3s ease-in;    
+}
+.navbar__links .navbar__link:hover::after{
+    background-color: var(--color-secondary-dark);
+}
+.navbar__link__active{
+    color: #000000 !important;
+    /* font-weight: 500; */
+    transition: all .3s ease-in;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+.navbar__link__active::after{
+    content: "";
+    position: absolute;
+    bottom: -1rem;
+    left: 0;
+    width: 100%;
+    height: .3rem;
+    background-color: var(--color-secondary-dark);
+}

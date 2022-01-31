@@ -1,0 +1,7 @@
+.hr{
+    border: none;
+    border-top: .1rem solid rgba(148, 148, 148, 0.356);
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}

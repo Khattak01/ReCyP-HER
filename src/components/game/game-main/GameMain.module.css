@@ -1,0 +1,63 @@
+.game_main {
+  padding: 1.5rem;
+  padding-top: var(--default-gap-sm);
+  background-color: #fdfdfd;
+
+  position: relative;
+}
+.game_heading__separator {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  border-bottom: 1px #d3d3d3 solid;
+}
+.game_header__heading {
+  font-weight: lighter;
+  letter-spacing: 1.2px;
+  font-size: 2.4rem;
+  padding-top: 0.4rem;
+}
+/* line 14 padding top size is calculated for lines adjustement, you can ajdust it according to heading font size */
+
+.game__scenario {
+  text-align: center;
+  position: relative;
+}
+.game__scenario p {
+  text-align: left;
+  /* width: 80%; */
+  /* margin: auto auto; */
+}
+.game__bottom {
+  z-index: 10;
+  width: calc(100% - 4rem);
+  /* height: 10rem; */
+  /* background-color: red; */
+  position: absolute;
+  /* border: 1px solid red; */
+  bottom: 4rem;
+  right: 2rem;
+  left: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.game_button {
+  padding: 0.8rem;
+  background-color: #e9e8e8;
+  color: #333;
+  border: none;
+  outline: none;
+  font-size: 1.4rem;
+  border-radius: 1px;
+  cursor: pointer;
+  transform: translateX(2px);
+
+  transition: var(--default-transition);
+}
+.game_button:hover {
+  transform: translateX(0px);
+  background-color: #cccccc;
+}
+.game_button:active {
+  transform: translateX(2px);
+}
